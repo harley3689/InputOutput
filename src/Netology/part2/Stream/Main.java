@@ -34,7 +34,7 @@ public class Main {
                 .filter(person -> person.getEducation() == Education.HIGHER)
                 .filter(person -> person.getAge() >= 18)
                 .filter(person -> (person.getSex() == Sex.WOMAN && person.getAge() < 60)
-                        || (person.getSex() == Sex.MAN && person.getAge() < 65))
+                                || (person.getSex() == Sex.MAN && person.getAge() < 65))
                 .sorted(Comparator.comparing(Person::getSurname))
                 .collect(Collectors.toList());
 
