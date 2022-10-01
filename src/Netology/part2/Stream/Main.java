@@ -19,7 +19,7 @@ public class Main {
         }
 
 
-        persons.stream()
+        long minors = persons.stream()
                 .filter(person -> person.getAge() < 18)
                 .count();
 
