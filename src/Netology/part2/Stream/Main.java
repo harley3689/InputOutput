@@ -20,21 +20,21 @@ public class Main {
 
 
         persons.stream()
-                .filter(person -> person.getAge()<18)
+                .filter(person -> person.getAge() < 18)
                 .count();
 
         List<String> rookie = persons.stream()
-                .filter(person -> person.getAge()>=18)
-                .filter(person -> person.getAge()<=27)
-                .filter(person -> person.getSex()==Sex.MAN)
+                .filter(person -> person.getAge() >= 18)
+                .filter(person -> person.getAge() <= 27)
+                .filter(person -> person.getSex() == Sex.MAN)
                 .map(Person::getSurname)
                 .collect(Collectors.toList());
 
         List<Person> performance = persons.stream()
-                .filter(person -> person.getEducation()==Education.HIGHER)
-                .filter(person -> person.getAge()>=18)
-                .filter(person -> (person.getSex()==Sex.WOMAN && person.getAge()<60)
-                                || (person.getSex()==Sex.MAN&&person.getAge()<65))
+                .filter(person -> person.getEducation() == Education.HIGHER)
+                .filter(person -> person.getAge() >= 18)
+                .filter(person -> (person.getSex() == Sex.WOMAN && person.getAge() < 60)
+                        || (person.getSex() == Sex.MAN && person.getAge() < 65))
                 .sorted(Comparator.comparing(Person::getSurname))
                 .collect(Collectors.toList());
 

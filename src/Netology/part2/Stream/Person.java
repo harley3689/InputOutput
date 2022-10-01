@@ -8,7 +8,7 @@ public class Person {
     protected Education education;
 
 
-    public Person(String name,String surname,int age,Sex sex,Education education){
+    public Person(String name, String surname, int age, Sex sex, Education education) {
         this.name = name;
         this.surname = surname;
         this.age = age;
@@ -39,10 +39,10 @@ public class Person {
     @Override
     public String toString() {
         return "Person{" +
-                "name='"+name+'\''+
-                ",surname='"+surname+'\''+
-                ",age="+age+
-                ",sex="+sex+
-                ",education="+education+'}';
+                "name='" + name + '\'' +
+                ",surname='" + surname + '\'' +
+                ",age=" + age +
+                ",sex=" + sex +
+                ",education=" + education + '}';
     }
 }
